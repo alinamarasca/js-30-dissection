@@ -1,82 +1,44 @@
 
 html {
-  box-sizing: border-box;
-  background: url('oh-la-la.jpeg') center no-repeat;
-  background-size: cover;
-  min-height: 100vh;
+  font-family: sans-serif;
+  background: #ffc600;
+}
+
+.inbox {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
+}
+
+.item {
   display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+  border-bottom: 1px solid #F1F1F1;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+.item:last-child {
+  border-bottom: 0;
 }
 
-svg {
-  fill: white;
-  background: rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  border-radius: 50%;
-  width: 200px;
-  margin-bottom: 50px;
+
+input:checked + p {
+  background: #F9F9F9;
+  text-decoration: line-through;
 }
 
-.wrapper {
-  padding: 20px;
-  max-width: 350px;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+input[type="checkbox"] {
+  margin: 20px;
 }
 
-h2 {
-  text-align: center;
+p {
   margin: 0;
-  font-weight: 200;
-}
-
-.plates {
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  list-style: none;
-}
-
-.plates li {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 10px 0;
-  font-weight: 100;
-  display: flex;
-}
-
-.plates label {
+  padding: 20px;
+  transition: background 0.2s;
   flex: 1;
-  cursor: pointer;
-}
-
-.plates input {
-  display: none;
-}
-
-.plates input + label:before {
-  content: '⬜️';
-  margin-right: 10px;
-}
-
-.plates input:checked + label:before {
-  content: '🌮';
-}
-
-.add-items {
-  margin-top: 20px;
-}
-
-.add-items input {
-  padding: 10px;
-  outline: 0;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-family: 'helvetica neue';
+  font-size: 20px;
+  font-weight: 200;
+  border-left: 1px solid #D1E2FF;
 }
