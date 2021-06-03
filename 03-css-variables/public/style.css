@@ -1,82 +1,37 @@
+    :root {
+      --base: #ffc600;
+      --spacing: 10px;
+      --blur: 10px;
+    }
 
-html {
-  box-sizing: border-box;
-  background: url('oh-la-la.jpeg') center no-repeat;
-  background-size: cover;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
-}
+    img {
+      padding: var(--spacing);
+      background: var(--base);
+      filter: blur(var(--blur));
+    }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
+    .hl {
+      color: var(--base);
+    }
 
-svg {
-  fill: white;
-  background: rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  border-radius: 50%;
-  width: 200px;
-  margin-bottom: 50px;
-}
+    /*
+      misc styles, nothing to do with CSS variables
+    */
 
-.wrapper {
-  padding: 20px;
-  max-width: 350px;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
-}
+    body {
+      text-align: center;
+      background: #193549;
+      color: white;
+      font-family: 'helvetica neue', sans-serif;
+      font-weight: 100;
+      font-size: 50px;
+    }
 
-h2 {
-  text-align: center;
-  margin: 0;
-  font-weight: 200;
-}
+    .controls {
+      margin-bottom: 50px;
+    }
 
-.plates {
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  list-style: none;
-}
-
-.plates li {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 10px 0;
-  font-weight: 100;
-  display: flex;
-}
-
-.plates label {
-  flex: 1;
-  cursor: pointer;
-}
-
-.plates input {
-  display: none;
-}
-
-.plates input + label:before {
-  content: '⬜️';
-  margin-right: 10px;
-}
-
-.plates input:checked + label:before {
-  content: '🌮';
-}
-
-.add-items {
-  margin-top: 20px;
-}
-
-.add-items input {
-  padding: 10px;
-  outline: 0;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
+    input {
+      width: 100px;
+    }
+  
